@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.image-background {
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background: url('./images/jackopen.webp');
+  background-size: cover;
+  background-repeat: none;
+  background-position: right top 15%;
+}
+
+/* Opening Section */
+
+.open {
+  height: 102vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: none;
+  background-position: right top 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.open::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+}
+
+.open-content-middle {
+  display: flex;
+  background: rgba(0, 0, 0, .3);
+  color: white;
+  padding: 15px 70px 30px 70px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  transition: .3s;
+}
+
+.open-content-middle:hover {
+  background: rgba(0, 0, 0, .8);
+  padding: 0 0 20px 0;
+  margin-top: 2%;
+}
+
+.open-content-middle h1 {
+  font-size: 60px;
+  font-weight: 800;
+  padding: 0px 20px;
+  border-radius: 10px;
+}
+
+.socials {
+  margin-top: -20px;
+  font-size: 23px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.socials .fa {
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.socials .fa:hover {
+  color: rgb(0, 130, 48);
+}
+
+.open-new-single {
+  margin-top: 30px;
+  font-weight: 400;
+  padding: 0 10px 3px 10px;
+  font-size: 15px;
+  border-bottom: 1px solid white;
+}
+
+.read-more-button {
+  margin-top: 10px;
+  width: 130px;
+  height: 30px;
+  border: 1px solid white;
+  color: white;
+  background-color: inherit;
+  font-size: 14px;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.read-more-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/*menu*/
+
+.menu {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+}
+
+.menu a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+.mid {
+  height: 57px;
+  width: 120px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: .2s;
+  border-bottom: 3px solid rgb(234, 247, 255);
+}
+
+.mid-clicked {
+  background: rgb(206, 236, 255);
+  border-bottom: 3px solid rgb(243, 148, 248);
+}
+
+.mid:hover {
+  background: rgb(225, 222, 239);
+  border-bottom: 3px solid rgb(243, 148, 248);
+}
+
+/* music */
+
+.music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.section-title {
+  font-size: 42px;
+  margin: 50px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .7);
+}
+
+.section-title-padded {
+  margin-top: 110px;
+}
+
+.songs {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.song {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgb(175, 175, 175);
+  transition: .3s;
+  background-color: white;
+}
+
+.song:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.05);
+  border-color: rgb(60, 60, 60);
+}
+
+.song-main {
+  display: flex;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+
+.song img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.song-details h4 {
+  font-size: 20px;
+}
+
+.song-details p {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.song-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.song-buttons button {
+  height: 26px;
+  border: 1px solid black;
+  border-radius: 3px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.watch-video {
+  width: 120px;
+  background: linear-gradient(to right, white 50%, rgb(183, 197, 251));
+}
+
+.song-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.download {
+  width: 80px;
+  margin-left: 20px;
+  background: linear-gradient(to right, rgb(183, 197, 251) 30%, rgb(218, 148, 237));
+}
+
+.song h5 {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* shows */
+
+.show {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  padding-top: 80px;
+}
+
+.show-title {
+  font-size: 42px;
+  margin: 20px 0 40px 0;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .7);
+}
+
+.show-intro-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.events-toggle {
+  font-size: 11px;
+  color: rgb(22, 209, 22);
+  margin-right: 20px;
+  border-bottom: 1px solid rgb(22, 209, 22);
+  transition: .1s;
+}
+
+.events-toggle:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.show-intro {
+  font-style: italic;
+  font-size: 13px;
+  width: 80%;
+  text-align: left;
+}
+
+.show-grid-outer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px rgb(175, 175, 175);
+  background-color: white;
+}
+
+.show-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 21% 11% 43% 25%;
+  font-size: 10px;
+}
+
+.show-grid-top {
+  color: rgb(165, 165, 165);
+  height: 20px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.show-time, .show-event, .show-location, .show-date {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.show-grid-top-date {
+  padding-left: 10px;
+}
+
+.show-date {
+  padding-left: 10px;
+}
+
+.show-time, .show-date {
+  font-weight: 600;
+}
+
+.show-location, .show-event {
+  color: rgb(165, 165, 165);
+}
+
+/* contact and about */
+
+.contact-about {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-top: 80px;
+}
+
+.about {
+  width: 45%;
+  background: url('./images/jackopen.webp');
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(175, 175, 175);
+  border: 1px solid rgb(175, 175, 175);
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: height .8s ease;
+}
+
+.about-details h2 {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.about-details p {
+  font-size: 10.5px;
+  width: 90%;
+  line-height: 16px;
+  text-align: center;
+}
+
+.contact {
+  width: 35%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(175, 175, 175);
+  border: 1px solid rgb(175, 175, 175);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.contact-input, .contact textarea {
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgb(175, 175, 175);
+  border: 1px solid rgb(175, 175, 175);
+}
+
+.contact-input {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  outline: none;
+}
+
+.contact h2 {
+  margin-top: 10px;
+  height: 35px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.contact textarea {
+  outline: none;
+  padding: 4px 8px;
+  height: 50px;
+}
+
+.contact-submit {
+  margin-top: 10px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  border: 1.5px solid black;
+  height: 26px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.email-note {
+  font-size: 12px;
+  width: 90%;
+  text-align: left;
+  margin-top: 8px;
+  font-style: italic;
+  color: rgb(78, 78, 78);
+}
